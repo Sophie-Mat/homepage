@@ -1,10 +1,189 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Résumé</title>
-  </head>
-  <body>
-    ― Hello World! &#x1F609;
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Résumé</title>
+        <link rel="stylesheet" href="styles.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+    <div class="layout-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="glass-panel profile-card fade-in">
+                <div class="avatar-wrapper">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="assets/avatar.jpg" alt="Sofia Matthaiaki" class="avatar">
+                        </div>
+                        <div class="flip-card-back">
+                            <span style="font-size: 1.1rem; text-align: center; padding: 0 10px;">Click my title... 🤫</span>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="profile-name">Sofia Matthaiaki</h1>
+                <h2 id="job-title" class="profile-title" onclick="this.innerText = this.innerText === 'Full-Stack Developer' ? 'Click \'Experience\' 3 times 🕵️‍♀️' : 'Full-Stack Developer'" style="cursor: pointer;" title="Click for a surprise!">Full-Stack Developer</h2>
+                
+                <div class="contact-links">
+                    <a href="https://www.google.com/maps/place/Heraklion,+Greece" class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 384 512"><path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg>
+                        Heraklion, Greece
+                    </a>
+                    <a href="https://www.linkedin.com/in/sofia-matthaiaki/" class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/Sophie-Mat" class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="glass-panel fade-in" style="transition-delay: 0.1s;">
+                <h3 class="section-title">Languages</h3>
+                <div class="cert-item language-item">
+                    <span class="cert-title">Greek</span>
+                    <span class="cert-issuer">Native</span>
+                </div>
+                <div class="cert-item language-item">
+                    <span class="cert-title">English</span>
+                    <span class="cert-issuer">C2</span>
+                </div>
+            </div>
+
+            <div class="glass-panel fade-in" style="transition-delay: 0.2s;">
+                <h3 class="section-title">Certifications</h3>
+                <div class="cert-item">
+                    <div class="cert-title">Google Cybersecurity Professional</div>
+                    <div class="cert-issuer">Coursera - Google & INCO Academy Scholarship</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-title">Foundation of Ethical Hacking</div>
+                    <div class="cert-issuer">Udacity Scholarship</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-title">Future AWS AI Engineer</div>
+                    <div class="cert-issuer">Udacity Scholarship</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-title">Docker and Kubernetes</div>
+                    <div class="cert-issuer">DataCamp</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-title">Git Fundamentals</div>
+                    <div class="cert-issuer">DataCamp</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section class="glass-panel fade-in" style="transition-delay: 0.3s;">
+                <h3 class="section-title">About Me</h3>
+                <p class="intro-text">
+                    <b>Software Engineering student</b> with experience in web development, collaborative workflows, and AI systems. Currently researching LLM interoperability and agent customization for my bachelor’s thesis. I leverage a security-first mindset, backed by cybersecurity certifications, to ensure that modern AI and web solutions are developed with robust, secure coding standards.
+                </p>
+            </section>
+
+            <section class="glass-panel fade-in" style="transition-delay: 0.4s;">
+                <h3 class="section-title" id="experience-hint">Experience</h3>
+                <div class="timeline-item">
+                    <span class="timeline-date">08/2025 – 01/2026</span>
+                    <h4 class="timeline-title">Software Engineering Intern</h4>
+                    <div class="timeline-subtitle">NILE Lab - Hellenic Mediterranean University</div>
+                    <ul class="timeline-details">
+                        <li>Developed, updated, and maintained websites using React.js, Tailwind CSS, JavaScript, and TypeScript.</li>
+                        <li>Deployed and managed websites on GitLab repositories, ensuring version control and smooth updates.</li>
+                        <li>Conducted R&D on an AI-powered agent platform, focusing on the creation of customizable autonomous systems.</li>
+                        <li>Set up PCs and configured development environments for lab projects.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="glass-panel fade-in" style="transition-delay: 0.5s;">
+                <h3 class="section-title">Education</h3>
+                <div class="timeline-item">
+                    <span class="timeline-date">Present (Expected Graduation: 2026)</span>
+                    <h4 class="timeline-title">B.Sc. in Informatics Engineering</h4>
+                    <div class="timeline-subtitle">Hellenic Mediterranean University</div>
+                    <ul class="timeline-details">
+                        <li><strong>Specialization:</strong> Software Engineering</li>
+                        <li><strong>Bachelor’s Thesis:</strong> Developing a customizable AI agent platform, focusing on LLM interoperability through prompt engineering.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="glass-panel fade-in" style="transition-delay: 0.6s;">
+                <h3 class="section-title">Hackathons & Awards</h3>
+                <div class="timeline-item">
+                    <span class="timeline-date">15/03/2026</span>
+                    <h4 class="timeline-title">1st Place Winner - Get Into AI Hackathon</h4>
+                    <div class="timeline-subtitle">Bizrupt</div>
+                    <ul class="timeline-details">
+                        <li>Co-developed "Phos", a web application built with Lovable (AI-assisted development) to enhance pedestrian safety.</li>
+                        <li>Implemented a dynamic navigation algorithm integrating Public APIs (street lighting, shop hours, police stations) to calculate safety scores for both real-time and future scheduled routes.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-date">30/11/2025</span>
+                    <h4 class="timeline-title">2nd Place Winner - Innodays 2025</h4>
+                    <div class="timeline-subtitle">Region of Crete</div>
+                    <ul class="timeline-details">
+                        <li>Designed high-fidelity prototypes (Desktop & Mobile) for the MinoEats website using Figma.</li>
+                        <li>Demonstrated high learning agility by mastering Figma’s design workflows in the weeks leading up to the event, to deliver the project’s final design under strict time constraints.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="glass-panel fade-in" style="transition-delay: 0.7s;">
+                <h3 class="section-title">Technical Skills</h3>
+                
+                <div class="skill-category">
+                    <h4>Programming Languages & Core</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript (ES6+)</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Frameworks & Tools</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">NestJS</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Git/GitLab</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h4>AI & Cloud</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">LLMs & Prompt Engineering</span>
+                        <span class="skill-tag">Ollama</span>
+                        <span class="skill-tag">Lovable</span>
+                        <span class="skill-tag">AWS Bedrock</span>
+                        <span class="skill-tag">Partyrock</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Terminal Overlay -->
+    <div id="hacker-terminal" class="terminal-overlay hidden">
+        <div class="terminal-content">
+            <span id="terminal-output"></span><span class="blinking-cursor" id="terminal-cursor">_</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
