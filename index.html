@@ -12,10 +12,17 @@
         <aside class="sidebar">
             <div class="glass-panel profile-card fade-in">
                 <div class="avatar-wrapper">
-                    <img src="assets/avatar.jpg" alt="Sofia Matthaiaki" class="avatar">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="assets/avatar.jpg" alt="Sofia Matthaiaki" class="avatar">
+                        </div>
+                        <div class="flip-card-back">
+                            <span style="font-size: 1.1rem; text-align: center; padding: 0 10px;">Click my title... 🤫</span>
+                        </div>
+                    </div>
                 </div>
                 <h1 class="profile-name">Sofia Matthaiaki</h1>
-                <h2 class="profile-title">Full-Stack Developer</h2>
+                <h2 id="job-title" class="profile-title" onclick="this.innerText = this.innerText === 'Full-Stack Developer' ? 'Click \'Experience\' 3 times 🕵️‍♀️' : 'Full-Stack Developer'" style="cursor: pointer;" title="Click for a surprise!">Full-Stack Developer</h2>
                 
                 <div class="contact-links">
                     <a href="https://www.google.com/maps/place/Heraklion,+Greece" class="contact-item">
@@ -80,7 +87,7 @@
             </section>
 
             <section class="glass-panel fade-in" style="transition-delay: 0.4s;">
-                <h3 class="section-title">Experience</h3>
+                <h3 class="section-title" id="experience-hint">Experience</h3>
                 <div class="timeline-item">
                     <span class="timeline-date">08/2025 – 01/2026</span>
                     <h4 class="timeline-title">Software Engineering Intern</h4>
@@ -170,7 +177,13 @@
         </main>
     </div>
 
-    <!-- Minimal JS for Scroll Animations -->
+    <!-- Terminal Overlay -->
+    <div id="hacker-terminal" class="terminal-overlay hidden">
+        <div class="terminal-content">
+            <span id="terminal-output"></span><span class="blinking-cursor" id="terminal-cursor">_</span>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
